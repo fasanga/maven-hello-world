@@ -58,8 +58,8 @@
       </plugin>
       <plugin>
 	<groupId>org.apache.maven.plugins</groupId>
-	<artifactId>maven-jar-plugin</artifactId>
-	<version>3.3.0</version>
+	<artifactId>maven-shade-plugin</artifactId>
+	<version>2.1</version>
 	<executions>
 	  <execution>
 	    <phase>package</phase>
@@ -108,3 +108,7 @@
     </plugins>
   </build>
 </project>
+<execution>
+  <id>default-jar</id>
+  <phase>none</phase>
+</execution>
