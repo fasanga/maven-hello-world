@@ -108,7 +108,19 @@
     </plugins>
   </build>
 </project>
-<execution>
-  <id>default-jar</id>
-  <phase>none</phase>
-</execution>
+<plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jar-plugin</artifactId>
+          <executions>
+            <execution>
+              <phase>install</phase>
+              <goals>
+                <goal>jar</goal>
+              </goals>
+              <configuration>
+                  <classifier>identify_your_jar_file_differently</classifier>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>        
